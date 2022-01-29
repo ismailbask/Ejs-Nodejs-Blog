@@ -14,6 +14,6 @@ app.use("/",blogRouter);
 app.use("/blog",blogRouter);
 
 
-app.listen(3000,()=>{
+app.listen(3000, () => {
     console.log("Server 3000 portunda çalışıyor...");
-})
+});
