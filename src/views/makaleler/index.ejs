@@ -1,0 +1,19 @@
+<%-include('../partials/_header') %> 
+<div class="columns is-multiline">
+<% makaleler.forEach((makale,index) => { %>
+    <div class="column is-4">
+        <p><%-include('../partials/_makale_card',{makale,index}) %></p>   
+    </div>
+<% }) %>
+</div>
+<!-- sayfalama mantığı -->
+<%
+const sayfaSayisi=sayfalama["x-wp-totalpages"];
+const toplamVeriSayisi=sayfalama["x-wp-total"];
+// console.log(sayfaSayisi,toplamVeriSayisi);
+const aktifSayfa=aktifPage;
+
+%> 
+<div class="block"></div>
+<%-include('../partials/_pagination',{sayfaSayisi,toplamVeriSayisi,aktifSayfa}) %> 
+<div class="block"></div>
